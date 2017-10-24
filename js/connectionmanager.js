@@ -25,7 +25,7 @@
 
         var fetchData = function () {
             if (state !== STATES.RUNNING && state !== STATES.STOPPING) {
-                console.error('[Fetch] Expected to be RUNNING or STOPPING but instead in following state:', state);
+                // console.error('[Fetch] Expected to be RUNNING or STOPPING but instead in following state:', state);
             }
 
             if (state === STATES.STOPPING) {
@@ -45,7 +45,7 @@
                 messageProcessor.processMessage(message);
                 setTimeout(fetchData, POLLING_INTERVAL_MS);
             }).catch(function (error) {
-                console.error('[Fetch] Request failure', error);
+                // console.error('[Fetch] Request failure', error);
                 setTimeout(fetchData, POLLING_INTERVAL_MS);
             });
         };

@@ -8,8 +8,7 @@
     var requestAnimationFrame = window.requestAnimationFrame;
     var ANIMATION_ENGINE = window.robotface.animationengine;
 
-    // This animation engine ignores messages and instead changes
-    // faces randomly on requestAnimationFrame
+    // This animation engine ignores messages and instead changes faces randomly on requestAnimationFrame
     ANIMATION_ENGINE.createFaceBenchmarkAnimationEngine = function (faceController) {
         requestAnimationFrame(function randomFace () {
             faceController.setRandomFaceEmotion();
